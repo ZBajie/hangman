@@ -1,0 +1,11 @@
+#letterlist{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    
+
+}
+
+#letterlist li{
+    margin: 1rem;
+}
