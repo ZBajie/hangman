@@ -29,7 +29,25 @@ function linesForLetterInWord(word) {
   }
 }
 
+// gets user guess, control that its a letter and send to testGuesLetter function
 function userLetter() {
   let letter = document.querySelector("#forguess").value
   console.log("letter", letter)
+  if (letter.length === 1 && letter.match(/[a-z]/i)) {
+    testGuessLetter(letter)
+    console.log("letter", letter)
+  }
+  document.querySelector("#forguess").value = "" // empty input
+}
+
+function testGuessLetter(letter) {
+  for (let i = 0; i < word.length; i++) {
+    if (letter.toLowerCase() === word[i]) {
+      let k = i + 1
+      let placeNewLetter = document.querySelector(
+        "#letterlist li:nth-child(" + k + ")"
+      )
+      placeNewLetter.innerText = letter.toLowerCase()
+    }
+  }
 }
