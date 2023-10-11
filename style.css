@@ -9,6 +9,7 @@
     margin: 1rem;
 }
 
+
 /* dölja gubben från start! */
 svg #scaffold {
     display: none;
@@ -26,3 +27,4 @@ svg #arms {
 svg #legs{
     display: none;
 } 
+
