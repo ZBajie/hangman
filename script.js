@@ -63,7 +63,10 @@ function testGuessLetter(letter) {
     if (wrongGuesses === maxWrongGuesses) {
       document.getElementById("legs");
       setTimeout(function () {
-        alert("You lost unfortunately 😕, try again? 😍");
+        alert(
+          `You lost unfortunately 😕, the corect word was: ${word} try again? 😍 `
+        );
+        cleanLetters();
         newGame();
       }, 500);
     }
@@ -86,10 +89,18 @@ function handleWrongGuess() {
   }
 }
 
+function cleanLetters() {
+  const letters = document.querySelectorAll("#letterlist li");
+  letters.forEach((letter) => {
+    letter.innerText = "_";
+  });
+}
+
 function newGame() {
   wrongGuesses = 0;
   document.getElementById("head").style.display = "none";
   document.getElementById("body").style.display = "none";
   document.getElementById("arms").style.display = "none";
   document.getElementById("legs").style.display = "none";
+  window.location.reload()
 }
