@@ -37,8 +37,11 @@ function userLetter() {
     testGuessLetter(letter);
     console.log("letter", letter);
   }
-  document.querySelector("#forguess").value = ""; // empty input
+  else {
+    alert("Wrong input. enter only (1) letter without special characters.")
 }
+  document.querySelector("#forguess").value = ""; // empty input
+
 
 function testGuessLetter(letter) {
   for (let i = 0; i < word.length; i++) {
@@ -50,4 +53,5 @@ function testGuessLetter(letter) {
       placeNewLetter.innerText = letter.toLowerCase();
     }
   }
+}
 }
