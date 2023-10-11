@@ -42,7 +42,6 @@ body {
   padding: 5px;
 }
 
-/* dölja gubben från start! */
 svg #head {
   display: none;
 }
