@@ -2,10 +2,27 @@
     list-style-type: none;
     display: flex;
     flex-direction: row;
-    
 
 }
 
 #letterlist li{
     margin: 1rem;
 }
+
+/* dölja gubben från start */
+svg #scaffold {
+    display: none;
+}
+
+svg #body {
+    display: none;
+}
+
+
+svg #arms {
+    display: none;
+}
+
+svg #legs{
+    display: none;
+} 

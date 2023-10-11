@@ -10,7 +10,7 @@ function hangmanGame(){
     const word = listOfWords[ Math.floor(Math.random() * listOfWords.length)];
     console.log(word)
     linesForLetterInWord(word)
-    document.querySelector('#forGuessbutton').addEventListener('click', userLetter);
+    document.querySelector('#forguessbutton').addEventListener('click', userLetter);
 }
 
 function linesForLetterInWord(word){
@@ -23,8 +23,10 @@ function linesForLetterInWord(word){
 }
 
 function userLetter(){
-    let letter = document.querySelector('#forGuess').value
+    let letter = document.querySelector('#forguess').value
     console.log(letter);
 }
 
 userLetter();
+
+
