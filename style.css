@@ -9,7 +9,7 @@
     margin: 1rem;
 }
 
-/* dölja gubben från start */
+/* dölja gubben från start! */
 svg #scaffold {
     display: none;
 }
