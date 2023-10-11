@@ -3,16 +3,14 @@ const number = 1;
 switch(number){
     case 1: 
     hangmanGame();
-
-    
 }
 
 function hangmanGame(){
     const listOfWords = ['january', 'monday','elephant', 'summer', 'lawyer','school']
-    word = listOfWords[ Math.floor(Math.random() * listOfWords.length)];
+    const word = listOfWords[ Math.floor(Math.random() * listOfWords.length)];
     console.log(word)
     linesForLetterInWord(word)
-    document.querySelector('#forGuessbutton').addEventListener('Click', userLetter);
+    document.querySelector('#forGuessbutton').addEventListener('click', userLetter);
 }
 
 function linesForLetterInWord(word){
@@ -20,15 +18,13 @@ function linesForLetterInWord(word){
     for (let i = 0; i < word.length; i++){
         const letterItem = document.createElement('li')
         letterItem.innerText = '_';
-        letterList.append(letterItem)
-        
+        letterList.append(letterItem)  
     }
-
 }
 
 function userLetter(){
-
     let letter = document.querySelector('#forGuess').value
     console.log(letter);
 }
+
 userLetter();
