@@ -10,7 +10,6 @@ function hangmanGame() {
     "school",
   ]
   word = listOfWords[Math.floor(Math.random() * listOfWords.length)]
-  console.log(word)
   linesForLetterInWord(word)
   const userGuess = document.querySelector("#forguessbutton")
   userGuess.addEventListener("click", userLetter)
@@ -24,23 +23,20 @@ function linesForLetterInWord(word) {
     letterList.append(letterItem)
   }
 }
-
 // gets user guess, control that its a letter and send to testGuesLetter function!
 function userLetter() {
   let letter = document.querySelector("#forguess").value
-  console.log("letter", letter)
   if (letter.length === 1 && letter.match(/[a-z]/i)) {
     testGuessLetter(letter)
-    console.log("letter", letter)
-  } else {
+    } else {
     alert("Wrong input. enter only (1) letter without special characters.")
   }
-  document.querySelector("#forguess").value = "" // empty input
+  document.querySelector("#forguess").value = ""
 }
 
 const maxWrongGuesses = 4
 let wrongGuesses = 0
-const guessWordArray = new Array(word.length) // had to put outside function because array gets empty for every turn.
+const guessWordArray = new Array(word.length)
 function testGuessLetter(letter) {
   let found = false
   for (let i = 0; i < word.length; i++) {
@@ -80,7 +76,6 @@ function testGuessLetter(letter) {
 
 function handleWrongGuess() {
   wrongGuesses++
-
   if (wrongGuesses === 1) {
     document.getElementById("head").style.display = "block"
   } else if (wrongGuesses === 2) {
@@ -93,14 +88,12 @@ function handleWrongGuess() {
     alert("Something went wrong, restart the game and try again!")
   }
 }
-
 function cleanLetters() {
   const letters = document.querySelectorAll("#letterlist li")
   letters.forEach((letter) => {
     letter.innerText = "_"
   })
 }
-
 function newGame() {
   wrongGuesses = 0
   document.getElementById("head").style.display = "none"
