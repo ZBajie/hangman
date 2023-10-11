@@ -61,7 +61,11 @@ function testGuessLetter(letter) {
     }
     let guessWordArrayString = guessWordArray.join("")
     if (word === guessWordArrayString) {
-      alert("You won!! Play Again?")
+      setTimeout(function () {
+        alert(`You won, play again? 😍 `)
+        cleanLetters()
+        newGame()
+      }, 500)
     }
   }
   if (!found) {
@@ -71,10 +75,10 @@ function testGuessLetter(letter) {
       setTimeout(function () {
         alert(
           `You lost unfortunately 😕, the corect word was: ${word} try again? 😍 `
-        );
-        cleanLetters();
-        newGame();
-      }, 500);
+        )
+        cleanLetters()
+        newGame()
+      }, 500)
     }
   }
 }
@@ -96,17 +100,17 @@ function handleWrongGuess() {
 }
 
 function cleanLetters() {
-  const letters = document.querySelectorAll("#letterlist li");
+  const letters = document.querySelectorAll("#letterlist li")
   letters.forEach((letter) => {
-    letter.innerText = "_";
-  });
+    letter.innerText = "_"
+  })
 }
 
 function newGame() {
-  wrongGuesses = 0;
-  document.getElementById("head").style.display = "none";
-  document.getElementById("body").style.display = "none";
-  document.getElementById("arms").style.display = "none";
-  document.getElementById("legs").style.display = "none";
+  wrongGuesses = 0
+  document.getElementById("head").style.display = "none"
+  document.getElementById("body").style.display = "none"
+  document.getElementById("arms").style.display = "none"
+  document.getElementById("legs").style.display = "none"
   window.location.reload()
 }
