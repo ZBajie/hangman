@@ -37,8 +37,11 @@ function userLetter() {
     testGuessLetter(letter);
     console.log("letter", letter);
   }
-  document.querySelector("#forguess").value = ""; // empty input
+  else {
+    alert("Wrong input. enter only (1) letter without special characters.")
 }
+  document.querySelector("#forguess").value = ""; // empty input
+
 
 const maxWrongGuesses = 4;
 let wrongGuesses = 0;
@@ -68,6 +71,7 @@ function testGuessLetter(letter) {
   }
 }
 
+
 function handleWrongGuess() {
   wrongGuesses++;
 
@@ -90,4 +94,6 @@ function newGame() {
   document.getElementById("body").style.display = "none";
   document.getElementById("arms").style.display = "none";
   document.getElementById("legs").style.display = "none";
+=======
+
 }
