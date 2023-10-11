@@ -57,7 +57,6 @@ function testGuessLetter(letter) {
       // array thats used for checking if word is complete.
       guessWordArray[i] = letter.toLowerCase()
       found = true
-      //break
     }
     let guessWordArrayString = guessWordArray.join("")
     if (word === guessWordArrayString) {
