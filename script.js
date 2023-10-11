@@ -1,8 +1,4 @@
-const number = 1
-switch (number) {
-  case 1:
-    hangmanGame()
-}
+hangmanGame()
 
 function hangmanGame() {
   const listOfWords = [
