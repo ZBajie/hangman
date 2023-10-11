@@ -34,12 +34,35 @@ body {
   width: 4rem;
   margin-right: 20px;
 }
+.buttonguess:hover{
+  opacity: 0.9;
+  box-shadow: 5px 5px 14px 1px;
+}
+.buttonguess:active{
+  opacity: 0.4;
+}
 
-.buttonguess,
+.buttonguess{
+  border: 2px solid black;
+  border-radius: 5px;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  padding: 5px;
+  transition: opacity 0.15s;
+  font-weight: bold;
+  font-size: 15px;
+  width: 74px;
+  height: 36px;
+  cursor: pointer;
+}
 .inputletter {
   border: 2px solid black;
   border-radius: 5px;
-  padding: 5px;
+  padding: 15px;
+  width: 74px;
+  height: 36px;
+}
+.labeltext{
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
 svg #head {
