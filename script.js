@@ -29,7 +29,7 @@ function linesForLetterInWord(word) {
   }
 }
 
-// gets user guess, control that its a letter and send to testGuesLetter function
+// gets user guess, control that its a letter and send to testGuesLetter function!
 function userLetter() {
   let letter = document.querySelector("#forguess").value
   console.log("letter", letter)
