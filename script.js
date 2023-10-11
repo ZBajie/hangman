@@ -40,7 +40,11 @@ function userLetter() {
   document.querySelector("#forguess").value = ""; // empty input
 }
 
+const maxWrongGuesses = 4;
+let wrongGuesses = 0;
+
 function testGuessLetter(letter) {
+  let found = false;
   for (let i = 0; i < word.length; i++) {
     if (letter.toLowerCase() === word[i]) {
       let k = i + 1;
@@ -48,6 +52,42 @@ function testGuessLetter(letter) {
         "#letterlist li:nth-child(" + k + ")"
       );
       placeNewLetter.innerText = letter.toLowerCase();
+      found = true;
+      break;
     }
   }
+  if (!found) {
+    handleWrongGuess();
+    if (wrongGuesses === maxWrongGuesses) {
+      document.getElementById("legs");
+      setTimeout(function () {
+        alert("You lost unfortunately 😕, try again? 😍");
+        newGame();
+      }, 500);
+    }
+  }
+}
+
+function handleWrongGuess() {
+  wrongGuesses++;
+
+  if (wrongGuesses === 1) {
+    document.getElementById("head").style.display = "block";
+  } else if (wrongGuesses === 2) {
+    document.getElementById("body").style.display = "block";
+  } else if (wrongGuesses === 3) {
+    document.getElementById("arms").style.display = "block";
+  } else if (wrongGuesses === 4) {
+    document.getElementById("legs").style.display = "block";
+  } else{
+    alert("Something went wrong, restart the game and try again!")
+  }
+}
+
+function newGame() {
+  wrongGuesses = 0;
+  document.getElementById("head").style.display = "none";
+  document.getElementById("body").style.display = "none";
+  document.getElementById("arms").style.display = "none";
+  document.getElementById("legs").style.display = "none";
 }
