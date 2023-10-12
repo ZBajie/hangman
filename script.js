@@ -37,11 +37,18 @@ function userLetter() {
     guessedLetters.indexOf(letter) === -1
   ) {
     guessedLetters.push(letter)
-    testGuessLetter(letter)
-  } else if (guessedLetters.indexOf(letter) !== -1) {
-    alert("You've already guessed this letter.")
-  } else {
-    alert("Wrong input. enter only (1) letter without special characters.")
+    testGuessLetter(letter);
+  }else if (guessedLetters.indexOf(letter) !== -1) {
+
+    const wordContainer = document.querySelector(".wordcontainer")
+    const pElement = document.createElement("p")
+    pElement.innerText = "You've already guessed this letter!"
+    pElement.classList.add("testar")
+    wordContainer.appendChild(pElement)
+    
+    setTimeout(function () {
+      wordContainer.removeChild(pElement)
+    }, 3000);
   }
   document.querySelector("#forguess").value = ""
 }
