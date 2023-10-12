@@ -80,3 +80,16 @@ svg #arms {
 svg #legs {
   display: none;
 }
+
+.testar {
+    background-color: rgb(235, 224, 224);
+    position: absolute;
+    top: 70%;
+    left: 65%;
+    transform: translate(-50%, -50%);
+    border: 2px solid black;
+    border-radius: 1rem;
+    padding: 2rem;
+    font-size: 1.5rem;
+  }
+  
