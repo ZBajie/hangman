@@ -49,6 +49,8 @@ function userLetter() {
     setTimeout(function () {
       wordContainer.removeChild(pElement)
     }, 3000);
+  }else {
+    alert("Wrong input. enter only (1) letter without special characters.")
   }
   document.querySelector("#forguess").value = ""
 }
