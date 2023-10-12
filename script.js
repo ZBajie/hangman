@@ -53,6 +53,7 @@ function userLetter() {
     alert("Wrong input. enter only (1) letter without special characters.")
   }
   document.querySelector("#forguess").value = ""
+  document.querySelector("#forguess").focus();
 }
 
 const maxWrongGuesses = 4
