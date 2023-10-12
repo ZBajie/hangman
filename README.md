@@ -23,4 +23,6 @@ Att göra och ha med!
 [X] Spelet fungerar med inga fel i konsolen i developer tools. - Det ska inte komma några fel i konsolen!
 [X] Vettiga namn på variabler och funktioner på engelska. - Vi är nöjda med namnvalen, allt är på engelska!
 
+För att starta: Open with live server
+
 Av: Eva-Li, McQueen, Lars  (Zakarias skulle vara med i våran grupp men har dess värre varit sjuk)
