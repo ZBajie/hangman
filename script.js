@@ -46,14 +46,14 @@ function userLetter() {
       const wordContainer = document.querySelector(".wordcontainer");
       const pElement = document.createElement("p");
       pElement.innerText = "You've already guessed this letter!";
-      pElement.classList.add("testar");
+      pElement.classList.add("sameletter");
       wordContainer.appendChild(pElement);
 
       setTimeout(function () {
         wordContainer.removeChild(pElement);
       }, 3000);
     } else {
-      alert("Wrong input. enter only (1) letter without special characters.");
+      alert("Wrong input! Enter only (1) letter without special characters.");
     }
     document.querySelector("#forguess").value = "";
     document.querySelector("#forguess").focus();
@@ -95,7 +95,7 @@ function testGuessLetter(letter) {
       document.getElementById("legs");
       setTimeout(function () {
         alert(
-          `You lost unfortunately 😕, the corect word was: ${word} try again? 😍 `
+          `You lost unfortunately 😕, the corect word was: ${word}! Try again? 😍 `
         );
         newGame();
       }, 500);
