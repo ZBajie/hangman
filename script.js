@@ -28,7 +28,6 @@ function linesForLetterInWord(word) {
 
 hangmanGame();
 
-// gets user guess, control that its a letter and send to testGuesLetter function!
 function userLetter() {
   let letter = document.querySelector("#forguess").value;
   if (
@@ -77,7 +76,6 @@ function testGuessLetter(letter) {
         "#letterlist li:nth-child(" + k + ")"
       );
       placeNewLetter.innerText = letter.toLowerCase();
-      // array thats used for checking if word is complete.
       guessWordArray[i] = letter.toLowerCase();
       found = true;
     }
