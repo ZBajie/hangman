@@ -124,9 +124,6 @@ function newGame() {
   document.getElementById("body").style.display = "none";
   document.getElementById("arms").style.display = "none";
   document.getElementById("legs").style.display = "none";
-  const letters = document.querySelectorAll("#letterlist li");
-  letters.forEach((letter) => {
-    letter.innerText = "_";
-  });
+  linesForLetterInWord(wrongGuesses)
   window.location.reload();
 }
