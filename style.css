@@ -25,27 +25,24 @@ body {
   margin: 1rem;
 }
 
+.inputletter {
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 15px;
+  width: 74px;
+  height: 36px;
+  margin-right: 20px;
+}
 .labeltext {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 20px;
   margin-right: 20px;
 }
 
-.inputletter {
-  width: 4rem;
-  margin-right: 20px;
-}
-.buttonguess:hover{
-  opacity: 0.9;
-  box-shadow: 5px 5px 14px 1px;
-}
-.buttonguess:active{
-  opacity: 0.4;
-}
-
-.buttonguess{
+.buttonguess {
   border: 2px solid black;
   border-radius: 5px;
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   padding: 5px;
   transition: opacity 0.15s;
   font-weight: bold;
@@ -54,16 +51,27 @@ body {
   height: 36px;
   cursor: pointer;
 }
-.inputletter {
+
+.buttonguess:hover {
+  opacity: 0.9;
+  box-shadow: 5px 5px 14px 1px;
+}
+.buttonguess:active {
+  opacity: 0.4;
+}
+
+.sameletter {
+  background-color: rgb(235, 224, 224);
+  position: absolute;
+  top: 70%;
+  left: 65%;
+  transform: translate(-50%, -50%);
   border: 2px solid black;
-  border-radius: 5px;
-  padding: 15px;
-  width: 74px;
-  height: 36px;
+  border-radius: 1rem;
+  padding: 2rem;
+  font-size: 1.5rem;
 }
-.labeltext{
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
-}
+
 
 svg #head {
   display: none;
@@ -80,16 +88,3 @@ svg #arms {
 svg #legs {
   display: none;
 }
-
-.sameletter {
-    background-color: rgb(235, 224, 224);
-    position: absolute;
-    top: 70%;
-    left: 65%;
-    transform: translate(-50%, -50%);
-    border: 2px solid black;
-    border-radius: 1rem;
-    padding: 2rem;
-    font-size: 1.5rem;
-  }
-  

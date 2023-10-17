@@ -62,9 +62,24 @@ function userLetter() {
 document.querySelector("#forguessbutton").addEventListener("click", userLetter);
 document.querySelector("#forguess").addEventListener("keydown", userLetter);
 
-const maxWrongGuesses = 4;
 let wrongGuesses = 0;
 
+function handleWrongGuess() {
+  wrongGuesses++;
+  if (wrongGuesses === 1) {
+    document.getElementById("head").style.display = "block";
+  } else if (wrongGuesses === 2) {
+    document.getElementById("body").style.display = "block";
+  } else if (wrongGuesses === 3) {
+    document.getElementById("arms").style.display = "block";
+  } else if (wrongGuesses === 4) {
+    document.getElementById("legs").style.display = "block";
+  } else {
+    alert("Something went wrong, restart the game and try again!");
+  }
+}
+
+const maxWrongGuesses = 4;
 const guessWordArray = new Array(word.length);
 
 function testGuessLetter(letter) {
@@ -98,21 +113,6 @@ function testGuessLetter(letter) {
         newGame();
       }, 500);
     }
-  }
-}
-
-function handleWrongGuess() {
-  wrongGuesses++;
-  if (wrongGuesses === 1) {
-    document.getElementById("head").style.display = "block";
-  } else if (wrongGuesses === 2) {
-    document.getElementById("body").style.display = "block";
-  } else if (wrongGuesses === 3) {
-    document.getElementById("arms").style.display = "block";
-  } else if (wrongGuesses === 4) {
-    document.getElementById("legs").style.display = "block";
-  } else {
-    alert("Something went wrong, restart the game and try again!");
   }
 }
 
