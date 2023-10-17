@@ -4,7 +4,7 @@ Att göra och ha med!
 
 [X] Det ska vara gjort med HTML/CSS/Javascript.
 
-[X] Användaren ska kunna mata in med tangentbordet bokstäver - [a-z] då vi själva begränsat detta.
+[X] Användaren ska kunna mata in med tangentbordet bokstäver - [a-z] då vi själva begränsat detta. Man kan även välja att trycka på knappen guess eller Enter när man vill gissa.
 
 [X] Användaren ska kunna se vilka bokstäver den gissar rätt på och var i ordet de hamnar.
 
